@@ -60,5 +60,8 @@
         "@ledgerhq/hw-transport-webhid": "6.27.1",
         "@solana/wallet-adapter-base": "workspace:^",
         "eslint": "8.22.0"
+    },
+    "dependencies": {
+        "@solana/wallet-adapter-react": "workspace:^"
     }
 }

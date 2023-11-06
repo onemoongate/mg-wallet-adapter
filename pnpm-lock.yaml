@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 overrides:
   '@ledgerhq/devices': 6.27.1
   '@ledgerhq/hw-transport': 6.27.1
@@ -14,6 +10,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      '@solana/wallet-adapter-react':
+        specifier: workspace:^
+        version: link:packages/core/react
     devDependencies:
       '@changesets/cli':
         specifier: ^2.26.1
@@ -237,6 +237,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.11.0
         version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.15)(react@18.2.0)
+      '@moongate/moongate-adapter':
+        specifier: ^0.0.91
+        version: 0.0.91(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.78.0)
       '@mui/icons-material':
         specifier: ^5.11.16
         version: 5.14.1(@mui/material@5.14.1)(@types/react@18.2.15)(react@18.2.0)
@@ -4163,6 +4166,21 @@ packages:
       '@lezer/lr': 0.15.8
       json5: 2.2.3
     dev: true
+
+  /@moongate/moongate-adapter@0.0.91(@solana/wallet-adapter-base@packages+core+base)(@solana/web3.js@1.78.0):
+    resolution: {integrity: sha512-dvQluHF17x3E2p7aWQq/AWRvCyf0donqzf8exTTfDEkK/P2lVk4XGrAdD/HgOzW+hOwJIPhbetVEYtR63cs3Xw==}
+    peerDependencies:
+      '@solana/wallet-adapter-base': ^0.9.23
+      '@solana/web3.js': ^1.78.4
+    dependencies:
+      '@moongate/solana-wallet-sdk': 1.1.5
+      '@solana/wallet-adapter-base': link:packages/core/base
+      '@solana/web3.js': 1.78.0
+    dev: false
+
+  /@moongate/solana-wallet-sdk@1.1.5:
+    resolution: {integrity: sha512-yYoCzlKRiqYfzZuNPkN8NW/kzTobuo4J5YiJ3HqgYNedKJ0/m4rHbRkHkzAvew1Kn8Qf91rRpl2g+sI1bGzOJw==}
+    dev: false
 
   /@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.2:
     resolution: {integrity: sha512-9bfjwDxIDWmmOKusUcqdS4Rw+SETlp9Dy39Xui9BEGEk19dDwH0jhipwFzEff/pFg95NKymc6TOTbRKcWeRqyQ==}
@@ -19417,3 +19435,7 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
