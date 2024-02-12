@@ -6,13 +6,13 @@ import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider as ReactUIWalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { MoongateWalletAdapter } from '@zerotimedrift/moongate-adapter';
 import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { type SolanaSignInInput } from '@solana/wallet-standard-features';
 import { verifySignIn } from '@solana/wallet-standard-util';
 import { clusterApiUrl } from '@solana/web3.js';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 import type { FC, ReactNode } from 'react';
+import { MoongateWalletAdapter } from '@anishde12020/moongate-adapter';
 import React, { useCallback, useMemo } from 'react';
 import { AutoConnectProvider, useAutoConnect } from './AutoConnectProvider';
 
