@@ -34,7 +34,7 @@
         "export": "next export"
     },
     "dependencies": {
-        "@anishde12020/moongate-adapter": "^1.0.2",
+        "@anishde12020/moongate-adapter": "^1.0.3",
         "@ant-design/icons": "^4.8.0",
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
